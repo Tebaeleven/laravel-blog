@@ -15,7 +15,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">{{$article->title}}</h4>
                                 <h6 class="card-subtitle mb-2 text-muted"> {{$article->updated_at}}</h6>
-                                <p class="card-text">{{!!nl2br(e($article->body))}}</p>
+                                <p class="card-text">{!!nl2br(e($article->body))!!}</p>
 
                                 <form method="POST" action="./edit" style="display:inline">
                                     @csrf

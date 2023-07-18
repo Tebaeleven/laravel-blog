@@ -16,11 +16,10 @@
                     </div>
                     <div class="form-group mb-3">
                         <label for="bodyInput">内容</label>
-                        <textarea type="text" name="body" class="form-control" id="bodyInput" rows="8" required>
+                        <textarea type="text" name="body" class="form-control" id="bodyInput" rows="8" required></textarea>
                     </div>
-                    
-                    <button class="btn btn-sm btn-outline-secondary" type="submit" value="add" name="add">新規追加</button>
-                    <a href="," class="btn btn-secondary">キャンセル</a>
+                    <button class="btn btn-primary" type="submit" value="add" name="add">新規追加</button>
+                    <a href="." class="btn btn-secondary">キャンセル</a>
                 </form>
             </div>
         </div>

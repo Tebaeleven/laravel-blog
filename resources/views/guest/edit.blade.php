@@ -8,19 +8,20 @@
                 <h1>ブログ修正</h1>
             </div>
             <div class="col-12">
-                <form method="POST" action="./create">
+                <form method="POST" action="./change">
                     @csrf
+                    <input type="hidden" name="change_id" value="{{$article->id}}">
                     <div class="form-group mb-3">
                         <label for="titleIput">タイトル</label>
                         <input type="text" name="title" class="form-control" id="titleInput" value="{{$article->title}}">
                     </div>
                     <div class="form-group mb-3">
                         <label for="bodyInput">内容</label>
-                        <textarea type="text" name="body" class="form-control" id="bodyInput" rows="8" value="{{$article->body}}"">
+                        <textarea type="text" name="body" class="form-control" id="bodyInput" rows="8" required>{{$article->body}}</textarea>
                     </div>
                     
-                    <button class="btn btn-sm btn-outline-secondary" type="save" value="save" name="save">新規追加</button>
-                    <a href="," class="btn btn-secondary">キャンセル</a>
+                    <button class="btn btn-primary" type="save" value="save" name="save">編集保存</button>
+                    <a href="./" class="btn btn-secondary">キャンセル</a>
                 </form>
             </div>
         </div>
